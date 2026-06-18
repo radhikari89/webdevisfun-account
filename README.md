@@ -1,10 +1,10 @@
-# webdevisfun-account
+# webdevisfun-identity
 
-Shared Identity and Account app for webdevisfun independent apps.
+Shared Identity app for webdevisfun independent apps.
 
 ## Purpose
 
-This app owns account-facing user experience that can be reused by future independent apps while Auth0 remains the identity provider and login authority.
+This app owns shared identity and account-facing user experience that can be reused by future independent apps while Auth0 remains the identity provider and login authority.
 
 The app is intended to support workflows such as profile/account entry points, connected-app visibility, logout/account settings navigation, and future access-request or role-management UX.
 
@@ -12,13 +12,13 @@ The app is intended to support workflows such as profile/account entry points, c
 
 | Field | Value |
 | --- | --- |
-| App type | Independent UI-only app initially; backend/database added only when app-owned account data is needed. |
-| Repository | `radhikari89/webdevisfun-account` |
+| App type | Independent UI-only app initially; backend/database added only when app-owned identity or account data is needed. |
+| Repository | `radhikari89/webdevisfun-identity` |
 | GitHub Project | `https://github.com/users/radhikari89/projects/3` |
 | Identity source of truth | Auth0/OIDC tenant or security profile shared with other webdevisfun apps. |
-| Database | None initially. Add a separate app-owned database only for account metadata that should not live in Auth0. |
+| Database | None initially. Add a separate app-owned database only for identity/account metadata that should not live in Auth0. |
 | Backend dependency | None initially. Add a dedicated backend only for server-side account workflows, app access, audit, or metadata. |
-| Hub relationship | The hub may link users here for account workflows, but this app owns its own backlog and delivery work. |
+| Hub relationship | The hub may link users here for identity/account workflows, but this app owns its own backlog and delivery work. |
 | Portability | Must remain portable to a different domain, brand, or umbrella later. |
 
 ## Identity Model
@@ -47,8 +47,8 @@ npm run start
 
 - [ ] Auth0 remains the login authority.
 - [ ] No custom OAuth/OIDC provider is introduced.
-- [ ] Account UI can run independently from the hub.
-- [ ] Account UI can be deployed independently from the hub.
+- [ ] Identity/account UI can run independently from the hub.
+- [ ] Identity/account UI can be deployed independently from the hub.
 - [ ] Future backend, if added, validates Auth0-issued tokens independently.
 - [ ] Future database, if added, is owned by this app.
 
